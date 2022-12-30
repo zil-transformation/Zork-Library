@@ -110,6 +110,39 @@ Section - Version
 Section - Verbose
 
 
+Chapter - Command Support Phrasebook
+
+Section - Reporting Player Statistics
+
+To say player statistics:
+	say "Your score [if story has ended]is[else]would be[end if] [score] [bracket]total of [maximum score] points[close bracket], in [move count] moves.";
+	say "This score gives you the rank of [player ranking].";
+
+To say player ranking:
+	repeat through the table of rankings in reverse score order:
+		if the score is at least the score entry:
+			say the rank entry;
+			the rule succeeds;
+
+Table of Rankings
+Score	Rank
+-31	"Incompetent"
+0	"Beginner"
+31	"Amateur Adventurer"
+62	"Novice Adventurer"
+123	"Junior Adventurer"
+246	"Adventurer"
+370	"Hacker"
+493	"Winner"
+554	"Master"
+585	"Wizard"
+616	"Cheater"
+641	"Advanced Cheater"
+666	"Master Cheater"
+691	"Super Cheater"
+716	"Dungeon Master"
+
+
 Zork Commands ends here.
 
 ---- DOCUMENTATION ----
