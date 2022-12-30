@@ -1,6 +1,6 @@
 Version 1 of Zork Help Menu by Alex Proudfoot begins here.
 
-"There will be a summary here when I have time to write one."
+"Adds a help menu to the game."
 
 Include Basic Help Menu by Emily Short.
 

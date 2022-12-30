@@ -1,6 +1,6 @@
 Version 1 of Zork Presentation by Alex Proudfoot begins here.
 
-"There will be a summary here when I have time to write one."
+"Adds an Infocom-style presentation to the game."
 
 
 Section - Status Bar Style

@@ -1,6 +1,6 @@
 Version 1 of Zork Containment Limiter by Alex Proudfoot begins here.
 
-"There will be a summary here when I have time to write one."
+"Reproduces the containment limiting behaviour of the original game."
 
 Include Bulk Limiter by Eric Eve.
 

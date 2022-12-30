@@ -1,6 +1,6 @@
 Version 1 of Zork Commands by Alex Proudfoot begins here.
 
-"Commands, Actions and Default Responses."
+"Reproduces the commands and default responses of the original game."
 
 
 Chapter - Commands leading to In World Actions

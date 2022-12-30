@@ -1,6 +1,6 @@
 Version 1 of Zork Test Feedback Support by Alex Proudfoot begins here.
 
-"There will be a summary here when I have time to write one."
+"Adds support for test feedback to the game."
 
 
 Section - In Transcript Comments

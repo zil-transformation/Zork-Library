@@ -1,6 +1,6 @@
 Version 1 of Zork Scoring System by Alex Proudfoot begins here.
 
-"There will be a summary here when I have time to write one."
+"Reproduces the scoring system of the original game."
 
 Use scoring.
 The maximum score is 616.
