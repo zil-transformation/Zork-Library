@@ -104,21 +104,6 @@ Rule for writing a paragraph about an open container (called the box) when the b
 
 Section - Room Locale Description Level
 
-Understand "noobj" as room locale description toggling.
-Room locale description toggling is an action out of world and applying to nothing.
-
-Room locale description enabled is a truth state that varies. Room locale description enabled is initially true.
-
-Check room locale description toggling when room locale description enabled is true:
-	now room locale description enabled is false;
-	say "Don't print objects.";
-	stop the action;
-
-Check room locale description toggling when room locale description enabled is false:
-	now room locale description enabled is true;
-	say "Print objects.";
-	stop the action;
-
 Rule for printing the locale description of a room when room locale description enabled is false and the player's command does not match "look": do nothing.
 
 

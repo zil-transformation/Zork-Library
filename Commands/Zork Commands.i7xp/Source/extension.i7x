@@ -68,6 +68,25 @@ Carry out reading something:
 
 Chapter - Commands leading to Out of World Actions
 
+Section - Noobj
+
+Understand "noobj" as room locale description toggling.
+
+Room locale description toggling is an action out of world and applying to nothing.
+
+Room locale description enabled is a truth state that varies. Room locale description enabled is initially true.
+
+Check room locale description toggling when room locale description enabled is true:
+	now room locale description enabled is false;
+	say "Don't print objects.";
+	stop the action;
+
+Check room locale description toggling when room locale description enabled is false:
+	now room locale description enabled is true;
+	say "Print objects.";
+	stop the action;
+
+
 Section - Quit
 
 Carry out quitting the game (this is the say player statistics before quitting rule): say player statistics.
