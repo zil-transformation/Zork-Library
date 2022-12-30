@@ -21,4 +21,4 @@ Zork Containment Limiter ends here.
 
 ---- DOCUMENTATION ----
 
-There will be documentation here when I have the time to write some.
+This extension implements support for the containment limiting behaviour of the original game.
