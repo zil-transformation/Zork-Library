@@ -19,4 +19,4 @@ Zork Test Feedback Support ends here.
 
 ---- DOCUMENTATION ----
 
-There will be documentation here when I have the time to write some.
+This extension implements support for In Transcript Comments and GitHub Issue Reporting.
