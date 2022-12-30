@@ -147,4 +147,4 @@ Zork Help Menu ends here.
 
 ---- DOCUMENTATION ----
 
-There will be documentation here when I have the time to write some.
+This extension implements the help menu from the Zork game by Dean Menezes.
