@@ -12,7 +12,7 @@ Section - Points for Room Discovery
 
 A room has a number called discovery points. The discovery points are usually 0.
 
-Check going when the discovery points of the room gone to are not 0 (this is the award points for room discovery rule):
+Check going when the room gone to is a room and the discovery points of the room gone to are not 0 (this is the award points for room discovery rule):
 	if the room gone to is not visited, now the score is the score plus the discovery points of the room gone to.
 
 
