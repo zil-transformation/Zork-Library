@@ -40,7 +40,16 @@ Understand "look up [text] in [something]" as consulting it about (with nouns re
 
 Looking at is an action applying to one visible thing and requiring light.
 
-Carry out looking at something: try examining the noun.
+The looking at action has a truth state called looking at text printed.
+
+Carry out looking at (this is the standard looking at rule):
+	if the noun provides the property description and the description of the noun is not "":
+		say "[description of the noun][line break]";
+		now looking at text printed is true.
+
+Carry out looking at (this is the looking at undescribed things rule):
+	if looking at text printed is false:
+		say "[We] [see] nothing special about [the noun]." (A).
 
 
 Section - Read
