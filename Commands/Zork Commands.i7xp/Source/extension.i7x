@@ -2,6 +2,8 @@ Version 1 of Zork Commands by Alex Proudfoot begins here.
 
 "Reproduces the commands and default responses of the original game."
 
+When play begins: now the story viewpoint is first person singular; now the story tense is present tense. 
+
 
 Chapter - Commands leading to In World Actions
 
@@ -136,6 +138,38 @@ Section - Version
 
 
 Section - Verbose
+
+
+Chapter - Commands leading to Parser Errors
+
+Section - Unknown Words
+
+Include Unknown Word Error by Mike Ciul.
+
+Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error (this is the noun makes no sense here rule):
+	Let N be the position of non-dictionary word;
+	if N is zero:
+		make no decision;
+	say "I don't know the word ['][word at position N]['].";
+	restore oops from;
+
+To decide what number is the/-- position of non-dictionary verb: (- FindUnknownWordToken(1) -)
+
+Rule for printing a parser error when the latest parser error is the not a verb I recognise error (this is the don't know that verb rule):
+	Let N be the position of non-dictionary verb;
+	if N is zero:
+		say "I can't see that here.";
+		stop the action;
+	say "I don't know the word ['][word at position N]['].";
+	restore oops from;
+
+
+Section - Out of Scope Nouns
+
+Understand "[something]" as examining.
+
+Understand "examine [anything]" as examining.
+Check examining when the noun is not in the location: say "[We] [can't] see any [noun] here." instead.
 
 
 Chapter - Command Support Phrasebook
