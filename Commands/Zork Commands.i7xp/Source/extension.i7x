@@ -5,78 +5,6 @@ Version 1 of Zork Commands by Alex Proudfoot begins here.
 When play begins: now the story viewpoint is first person singular; now the story tense is present tense. 
 
 
-Chapter - Commands leading to In World Actions
-
-Section - Find
-
-Understand "find [something]" as finding.
-
-Finding is an action applying to one thing and requiring light.
-
-Check finding yourself (this is the can't find yourself rule):
-	say "Nothing happens." instead.
-
-Check finding a backdrop (this is the can't find a backdrop rule):
-	say "Nothing happens." instead.
-
-Carry out finding something which is not a backdrop when the noun is in the location:
-	say "There is [a noun] here.";
-
-Carry out finding something when the noun is in a container (called the box) and the box is in the location:
-	say "It is in [the box], which is here.";
-
-Carry out finding something when the player is carrying the noun:
-	say "You're holding [the noun]!"
-
-
-Section - Look at
-
-Understand the command look as something new.
-
-Understand "look" as looking. Understand "look at" as looking.
-Understand "look at [something]" as looking at.
-Understand "look [something]" as looking at.
-Understand "look inside/in/into/through [something]" as searching.
-Understand "look under [something]" as looking under.
-Understand "look up [text] in [something]" as consulting it about (with nouns reversed).
-
-Looking at is an action applying to one visible thing and requiring light.
-
-The looking at action has a truth state called looking at text printed.
-
-Carry out looking at (this is the standard looking at rule):
-	if the noun provides the property description and the description of the noun is not "":
-		say "[description of the noun][line break]";
-		now looking at text printed is true.
-
-Carry out looking at (this is the looking at undescribed things rule):
-	if looking at text printed is false:
-		say "[We] [see] nothing special about [the noun]." (A).
-
-
-Section - Read
-
-Understand the command read as something new.
-
-Understand "read [something]" as reading.
-Understand "read about [text] in [something]" as consulting it about (with nouns reversed).
-Understand "read [text] in [something]" as consulting it about (with nouns reversed).
-
-Reading is an action applying to one visible thing and requiring light.
-
-A thing can be readable. A thing is usually not readable.
-
-Check reading something (this is the can't read if not readable rule):
-	if the noun is not readable, say "How can [we] read [a noun]?" instead.
-
-Check reading yourself (this is the can't read yourself rule):
-	say "How can [we] read a cretin?" instead.
-
-Carry out reading something:
-	if the noun is not carried, try taking the noun;
-	try examining the noun;
-
-
 Chapter - Commands leading to Out of World Actions
 
 Section - Noobj
@@ -112,69 +40,303 @@ The restart the game rule response (A) is "Do you wish to restart? (Y is affirma
 
 Section - Restore
 
-
 Section - Rname
-
 
 Section - Save
 
-
 Section - Score
-
 
 Section - Script
 
-
 Section - Super
-
 
 Section - Time
 
-
 Section - Unscript
 
-
 Section - Version
-
 
 Section - Verbose
 
 
-Chapter - Commands leading to Parser Errors
+Chapter - Commands leading to In World Actions
 
-Section - Unknown Words
+Section - Answer
 
-Include Unknown Word Error by Mike Ciul.
+Section - Attack
 
-Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error (this is the noun makes no sense here rule):
-	Let N be the position of non-dictionary word;
-	if N is zero:
-		make no decision;
-	say "I don't know the word ['][word at position N]['].";
-	restore oops from;
+Section - Back
 
-To decide what number is the/-- position of non-dictionary verb: (- FindUnknownWordToken(1) -)
+Section - Blast
 
-Rule for printing a parser error when the latest parser error is the not a verb I recognise error (this is the don't know that verb rule):
-	Let N be the position of non-dictionary verb;
-	if N is zero:
-		say "I can't see that here.";
-		stop the action;
-	say "I don't know the word ['][word at position N]['].";
-	restore oops from;
+Section - Board
+
+Section - Brush
+
+Section - Burn
+
+Section - Chomp
+
+Section - Climb
+
+Section - Close
+
+Section - Count
+
+Section - Curse
+
+Section - Deflate
+
+Section - Diagnose
+
+Section - Dig
+
+Section - Disembark
+
+Section - Doc
+
+Section - Drink
+
+Section - Drop
+
+Section - Eat
+
+Section - Enter
+
+Section - Examine
+
+Section - Exorcise
+
+Section - Extinguish
+
+Section - Fill
+
+Section - Find
+
+Understand "find [something]" as finding.
+
+Finding is an action applying to one thing and requiring light.
+
+Check finding yourself (this is the can't find yourself rule):
+	say "Nothing happens." instead.
+
+Check finding a backdrop (this is the can't find a backdrop rule):
+	say "Nothing happens." instead.
+
+Carry out finding something which is not a backdrop when the noun is in the location:
+	say "There is [a noun] here.";
+
+Carry out finding something when the noun is in a container (called the box) and the box is in the location:
+	say "It is in [the box], which is here.";
+
+Carry out finding something when the player is carrying the noun:
+	say "You're holding [the noun]!"
 
 
-Section - Out of Scope Nouns
+Section - Follow
 
-Understand "[something]" as examining.
+Section - Frobozz
 
-Understand "examine [anything]" as examining.
-Check examining when the noun is not in the location: say "[We] [can't] see any [noun] here." instead.
+Section - Geronimo
+
+Section - Give
+
+Section - Hello
+
+Section - Blow
+
+Section - Incant
+
+Section - Inflate
+
+Section - Inventory
+
+Section - Foo
+
+Section - Jump
+
+Section - Kick
+
+Section - Kill
+
+Section - Knock
+
+Section - Leave
+
+Section - Light
+
+Section - Lock
+
+Section - Look
+
+Understand the command look as something new.
+
+Understand "look" as looking. Understand "look at" as looking.
+Understand "look at [something]" as looking at.
+Understand "look [something]" as looking at.
+Understand "look inside/in/into/through [something]" as searching.
+Understand "look under [something]" as looking under.
+Understand "look up [text] in [something]" as consulting it about (with nouns reversed).
+
+Looking at is an action applying to one visible thing and requiring light.
+
+The looking at action has a truth state called looking at text printed.
+
+Carry out looking at (this is the standard looking at rule):
+	if the noun provides the property description and the description of the noun is not "":
+		say "[description of the noun][line break]";
+		now looking at text printed is true.
+
+Carry out looking at (this is the looking at undescribed things rule):
+	if looking at text printed is false:
+		say "[We] [see] nothing special about [the noun]." (A).
 
 
-Chapter - Command Support Phrasebook
+Section - Lower
 
-Section - Reporting Player Statistics
+Section - Make
+
+Section - Melt
+
+Section - Move
+
+Section - Name
+
+Section - Objects
+
+Section - Pull
+
+Section - Mumble
+
+Section - Destroy
+
+Section - Odysseus
+
+Section - Lubricate
+
+Section - Oops
+
+Section - Open
+
+Section - Pick
+
+Section - Play
+
+Section - Plug
+
+Section - Plugh
+
+Section - Poke
+
+Section - Pour
+
+Section - Pray
+
+Section - Pump
+
+Section - Push
+
+Section - Put
+
+Section - Raise
+
+Section - Read
+
+Understand the command read as something new.
+
+Understand "read [something]" as reading.
+Understand "read about [text] in [something]" as consulting it about (with nouns reversed).
+Understand "read [text] in [something]" as consulting it about (with nouns reversed).
+
+Reading is an action applying to one visible thing and requiring light.
+
+A thing can be readable. A thing is usually not readable.
+
+Check reading something (this is the can't read if not readable rule):
+	if the noun is not readable, say "How can [we] read [a noun]?" instead.
+
+Check reading yourself (this is the can't read yourself rule):
+	say "How can [we] read a cretin?" instead.
+
+Carry out reading something:
+	if the noun is not carried, try taking the noun;
+	try examining the noun;
+
+
+Section - Repent
+
+Section - Ring
+
+Section - Room
+
+Section - Rub
+
+Section - Send
+
+Section - Shake
+
+Section - Slide
+
+Section - Skip
+
+Section - Smell
+
+Section - Squeeze
+
+Section - Stay
+
+Section - Strike
+
+Section - Swim
+
+Section - Swing
+
+Section - Take
+
+Section - Go Through
+
+Section - Throw
+
+Section - Tie
+
+Section - Treasure
+
+Section - Turn
+
+Section - Spin
+
+Section - Unlock
+
+Section - Untie
+
+Section - Wait
+
+Section - Wait
+
+Section - Walk
+
+Section - Wave
+
+Section - Win
+
+Section - Wish
+
+Section - Wind
+
+Section - Yell
+
+Section - Zork
+
+
+Chapter - Generic Responses
+
+Section - Ho Hum
+
+To say ho hum:
+	say "[one of]does not seem to do anything[or]is not notably useful[or]isn't very interesting[or]doesn't appear worthwhile[or]has no effect[or]doesn't do anything[purely at random]"
+
+
+Section - Player Statistics
 
 To say player statistics:
 	say "Your score [if story has ended]is[else]would be[end if] [score] [bracket]total of [maximum score] points[close bracket], in [move count] moves.";
@@ -203,6 +365,12 @@ Score	Rank
 666	"Master Cheater"
 691	"Super Cheater"
 716	"Dungeon Master"
+
+
+Section - Yuk
+
+To say yuk:
+	say "[one of]A valiant attempt.[or]You can't be serious.[or]Not a prayer.[or]Not likely.[or]An interesting idea...[or]What a concept![purely at random]".
 
 
 Zork Commands ends here.
