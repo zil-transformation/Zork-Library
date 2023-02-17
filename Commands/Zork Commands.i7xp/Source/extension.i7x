@@ -79,6 +79,64 @@ Section - Chomp
 
 Section - Climb
 
+A thing can be climbable. A thing is usually not climbable.
+
+[ 1 - Standard Climbing ]
+
+The block climbing rule is not listed in the check climbing rulebook.
+
+Does the player mean climbing something climbable: it is very likely.
+Carry out climbing: try going up.
+
+[Rule for supplying a missing noun while climbing:
+	say "-> Supplying a missing noun while climbing ...";
+	repeat with item running through things in the location:
+		if the item is climbable:
+			now the noun is the item;
+			say "([the noun])[line break]";
+			the rule succeeds;
+	now the noun is the location;]
+
+Understand "climb up" as just climbing up.
+
+Just climbing up is an action applying to nothing.
+
+Carry out just climbing up: try going up.
+
+[ 2 - Directional Climbing ]
+
+[Understand "climb [a direction]" as directional climbing.]
+
+Directional climbing is an action applying to one visible thing.
+
+Check directional climbing a direction (called the heading):
+	if the heading is not up and the heading is not down, say "Bizarre!" instead.
+
+Carry out directional climbing a direction (called the heading):
+	try going the heading.
+
+Understand "climb down [something]" as climbing down.
+[Understand "climb down" as climbing down.]
+
+Climbing down is an action applying to one thing.
+Does the player mean climbing down something climbable: it is very likely.
+
+Carry out climbing down: try going down.
+
+[After reading a command:
+	if the player's command matches "climb down":
+		change the text of the player's command to "climbdown";
+		say "([the player's command])";]
+
+[Rule for supplying a missing noun while climbing down:
+	repeat with item running through things in the location:
+		if the item is climbable:
+			now the noun is the item;
+			say "([the noun])[line break]";
+			the rule succeeds;
+	now the noun is the location;]
+
+
 Section - Close
 
 Section - Count
@@ -217,6 +275,9 @@ Section - Lubricate
 Section - Oops
 
 Section - Open
+
+The reveal any newly visible interior rule response (A) is "Opening [the noun] reveals "
+
 
 Section - Pick
 
